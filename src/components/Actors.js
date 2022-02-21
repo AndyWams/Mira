@@ -37,7 +37,7 @@ function Actors() {
       });
     };
     fetchAwards();
-  }, [setDataChart]);
+  }, []);
   return (
     <section className="chart_wrap">
       {Object.keys(dataChart).length !== 0 ? (
