@@ -40,4 +40,4 @@ Run `npm start` for a dev server. Navigate to `http://localhost:3000/`. The app 
 
 ## Build
 
-Run `npm build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `npm build` to build the project. The build artifacts will be stored in the `build/` directory.
