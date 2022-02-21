@@ -1,0 +1,10 @@
+export const CREATE_POST = "CREATE_POST";
+export const UPDATE_POST = "UPDATE_POST";
+export const FETCH_POST = "FETCH_POST";
+export const EDIT_POST = "EDIT_POST";
+export const DELETE_POST = "DELETE_POST";
+export const SET_BUTTON_ENABLED = "SET_BUTTON_ENABLED";
+export const SET_BUTTON_LOADING_STATUS = "SET_BUTTON_LOADING_STATUS";
+export const SET_LIMIT = "SET_LIMIT";
+export const SET_MODAL_OPEN = "SET_MODAL_OPEN";
+export const SET_POST_DATA = "SET_POST_DATA";

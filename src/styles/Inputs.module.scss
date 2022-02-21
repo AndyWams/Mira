@@ -1,0 +1,122 @@
+.container {
+  padding: 2em 4em;
+}
+.title {
+  font-size: 20px;
+  font-weight: 400;
+}
+.ruler {
+  display: block;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  padding: 0.5em 2em;
+  font-size: 16px;
+  font-weight: 700;
+  background: #21335e;
+  color: #fff;
+  &:disabled {
+    background: #ccc;
+  }
+}
+.modal_form_wrap {
+  padding: 2em;
+  margin: 2em auto 0em;
+  background: #fff;
+  border: 1px solid rgba(33, 51, 94, 0.15);
+  form {
+    width: auto;
+  }
+}
+.input {
+  margin-bottom: 1.5em;
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: rgba(7, 20, 40, 0.5);
+  }
+  input[type="text"],
+  input[type="number"] {
+    display: block;
+    padding: 1em 20px;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    height: 55px;
+    font-size: 15px;
+    border: 1px solid rgba(33, 51, 94, 0.15);
+    background: rgba(33, 51, 94, 0.05);
+    &:focus {
+      outline: none;
+      border: 1px solid rgba(33, 51, 94, 0.15);
+      background-color: #fff;
+    }
+  }
+}
+.form_wrap {
+  padding: 4em 2em;
+  margin: 2em auto 0em;
+  background: #fff;
+  border: 1px solid rgba(33, 51, 94, 0.15);
+  form {
+    width: 600px;
+    margin: 0 auto;
+  }
+
+  .select {
+    margin-bottom: 1.5em;
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 14px;
+      color: rgba(7, 20, 40, 0.5);
+    }
+    select {
+      display: block;
+      padding: 1em 20px;
+      border: none;
+      border-radius: 10px;
+      width: 100%;
+      height: 55px;
+      font-size: 15px;
+      border: 1px solid rgba(33, 51, 94, 0.15);
+      background: url("../../public/dropdown-arrow.svg") 95% no-repeat
+        rgba(33, 51, 94, 0.05) !important;
+      -webkit-appearance: none;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .container {
+    padding: 2em 1em;
+  }
+  .form_wrap {
+    form {
+      width: 100%;
+    }
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .container {
+    padding: 2em 1em;
+  }
+  .form_wrap {
+    form {
+      width: 100%;
+    }
+  }
+}

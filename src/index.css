@@ -1,13 +1,143 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.w-500 {
+  width: 500px;
+}
+.mh-500 {
+  min-height: 500px;
+}
+.chart_wrap {
+  width: 800px;
+  margin: 0 auto;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.status {
+  background: #d4e6f5;
+
+  padding: 0.5em 2em;
+  font-size: 14px;
+}
+.status.green {
+  color: green;
+}
+.status.red {
+  color: red;
+}
+.close-icon {
+  display: flex;
+}
+.modal_title {
+  font-size: 17px;
+}
+.txt_center {
+  text-align: center;
+}
+.modal_sub_title {
+  font-size: 15px;
+  color: #2196f3;
+}
+.close-icon ion-icon {
+  font-size: 30px;
+  cursor: pointer;
+  color: red;
+}
+._hide_me {
+  display: none;
+}
+._show_me {
+  display: block;
+}
+.block_sm_txt {
+  display: block;
+  font-size: 13px;
+  color: #000;
+}
+
+::-webkit-scrollbar {
+  width: 0.8em;
+  height: 0.8em;
+}
+::-webkit-scrollbar-track {
+  border: solid 10px transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 10px 10px darkgrey;
+  border: solid 3px transparent;
+}
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 50px;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #21335e;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+
+.spinner {
+  border: 2px solid #f3f3f3; /* Light grey */
+  border-top: 2px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+    background: rgba(#21335e, 0.3);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+    background: rgba(#21335e, 0.3);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+    background: rgba(#21335e, 0.3);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
 }
