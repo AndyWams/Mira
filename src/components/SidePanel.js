@@ -29,8 +29,9 @@ function SidePanel({ isActive, toggleClass }) {
     }
   };
 
-  const makeDeleteRequest = async (id) => {
+  const makeDeleteRequest = async (id, index) => {
     await deletePost(id);
+    console.log(posts.splice(index, 1));
     console.log("deleted");
   };
 
@@ -59,7 +60,7 @@ function SidePanel({ isActive, toggleClass }) {
                         {data.title}
                       </span>
                       <div
-                        onClick={() => makeDeleteRequest(data.id)}
+                        onClick={() => makeDeleteRequest(data.id, index)}
                         className="close-icon"
                       >
                         <ion-icon name="close-outline"></ion-icon>

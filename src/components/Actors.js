@@ -1,15 +1,34 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { chartColors } from "../colors";
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+import {
+  Chart as ChartJS,
+  ArcElement,
+  Tooltip,
+  Legend,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+} from "chart.js";
 import { getAwards } from "../services/app-service";
-import { Pie } from "react-chartjs-2";
+import { Pie, Line } from "react-chartjs-2";
 import Loader from "./Loader";
 function Actors() {
   const [dataChart, setDataChart] = useState({});
-  ChartJS.register(ArcElement, Tooltip, Legend);
+  ChartJS.register(
+    ArcElement,
+    Tooltip,
+    Legend,
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LinearScale,
+    LineElement
+  );
   let yearCount = [];
   let occurenceCount = [];
+  let years = [];
+  let count = [];
   useEffect(() => {
     const fetchAwards = async () => {
       await getAwards().then((response) => {
@@ -24,14 +43,19 @@ function Actors() {
               : 1;
           });
         }
+        count = Object.values(occurenceCount).map((x) => x);
+        years = [...new Set(yearCount)];
         setDataChart({
-          labels: yearCount,
+          labels: years,
           datasets: [
             {
               label: "",
-              data: occurenceCount,
-              backgroundColor: chartColors,
-              hoverBackgroundColor: chartColors,
+              data: count,
+              backgroundColor: [
+                "rgb(255, 99, 132)",
+                "rgb(54, 162, 235)",
+                "rgb(255, 205, 86)",
+              ],
             },
           ],
         });
