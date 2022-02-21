@@ -1,4 +1,3 @@
-import axios from "axios";
 import http from "./httpService";
 
 const httpOptions = {
@@ -18,7 +17,7 @@ const options = {
     "access-control-allow-headers": "ver",
     "access-control-allow-methods": "GET, POST",
     "x-rapidapi-host": "imdb8.p.rapidapi.com",
-    "x-rapidapi-key": "9ae3699b56msh12ffa0bcfd4ef0bp1c4410jsn56dda329931e",
+    "x-rapidapi-key": process.env.REACT_APP_API_KEY,
   },
 };
 
