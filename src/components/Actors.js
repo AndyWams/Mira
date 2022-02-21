@@ -49,13 +49,12 @@ function Actors() {
           labels: years,
           datasets: [
             {
-              label: "",
+              label: "Actor Awards",
+              type: "line",
               data: count,
-              backgroundColor: [
-                "rgb(255, 99, 132)",
-                "rgb(54, 162, 235)",
-                "rgb(255, 205, 86)",
-              ],
+              tension: 0.5,
+              fill: false,
+              borderColor: "rgb(75, 192, 192)",
             },
           ],
         });
@@ -66,7 +65,7 @@ function Actors() {
   return (
     <section className="chart_wrap">
       {Object.keys(dataChart).length !== 0 ? (
-        <Pie type="line" data={dataChart} />
+        <Line type="line" data={dataChart} />
       ) : (
         <Loader />
       )}
