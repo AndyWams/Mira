@@ -4,6 +4,7 @@ import { chartColors } from "../colors";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { getAwards } from "../services/app-service";
 import { Pie } from "react-chartjs-2";
+import Loader from "./Loader";
 function Actors() {
   const [dataChart, setDataChart] = useState({});
   ChartJS.register(ArcElement, Tooltip, Legend);
@@ -42,7 +43,9 @@ function Actors() {
     <section className="chart_wrap">
       {Object.keys(dataChart).length !== 0 ? (
         <Pie type="line" data={dataChart} />
-      ) : null}
+      ) : (
+        <Loader />
+      )}
     </section>
   );
 }
